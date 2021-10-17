@@ -115,6 +115,7 @@ class App extends Component {
                 <TextDisplay error={this.state.errorMessage} searchError={this.state.searchErrorMessage}>
                     <Poem author={this.state.poemAuthor} lines={this.state.poemLines} title={this.state.poemTitle} />
                 </TextDisplay>
+                <div>Brought to you by Yummy Apps</div>
             </div>
         );
     }
