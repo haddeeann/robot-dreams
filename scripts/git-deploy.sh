@@ -1,13 +1,23 @@
 #!/bin/bash
-git status
+
 
 git add .
 
-if [ -z $1 ]
-then 
-    git commit -m "sweet dreams"
-else 
-    git commit -m $1
-fi
+echo $1
 
-git push origin main
+git commit -m $1
+
+git status
+
+# if [ -z $1 ]
+# then 
+#     git commit -m "sweet dreams are made of these changes"
+# else 
+#     
+# fi
+
+# git push origin main
+
+# yarn build
+
+# yarn deploy

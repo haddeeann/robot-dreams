@@ -98,24 +98,34 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <div className='searchSideBar'>
-                    <PlayButton onClick={this.randomSearch} />
-                    <hr />
-                    <h3>Search For Poem</h3>
-                    <label htmlFor='title'>
-                        Poem Title
-                        <input type='text' id='title' value={this.state.searchTitle || ''} onChange={this.handleChangeTitle}></input>
-                    </label>
-                    <label htmlFor='author'>
-                        Poem Author
-                        <input type='text' id='author' value={this.state.searchAuthor || ''} onChange={this.handleChangeAuthor}></input>
-                    </label>
-                    <button className='searchButton' onClick={this.searchClick}>Search</button>
+                <div className="body">
+                    <div className='searchSideBar'>
+                        <PlayButton onClick={this.randomSearch} />
+                        <hr />
+                        <h3>Search For Poem</h3>
+                        <div>
+                            <label htmlFor='title'>
+                                Poem Title
+                                <input type='text' id='title' value={this.state.searchTitle || ''} onChange={this.handleChangeTitle}></input>
+                            </label>
+                        </div>
+                        <div>
+                            <label htmlFor='author'>
+                                Poem Author
+                                <input type='text' id='author' value={this.state.searchAuthor || ''} onChange={this.handleChangeAuthor}></input>
+                            </label>
+                        </div>
+
+                        <button className='searchButton' onClick={this.searchClick}>Search</button>
+                    </div>
+                    <TextDisplay error={this.state.errorMessage} searchError={this.state.searchErrorMessage}>
+                        <Poem author={this.state.poemAuthor} lines={this.state.poemLines} title={this.state.poemTitle} />
+                    </TextDisplay>
                 </div>
-                <TextDisplay error={this.state.errorMessage} searchError={this.state.searchErrorMessage}>
-                    <Poem author={this.state.poemAuthor} lines={this.state.poemLines} title={this.state.poemTitle} />
-                </TextDisplay>
-                <div>Brought to you by Yummy Apps</div>
+
+                <footer>
+                    <div>Brought to you by Yummy Apps</div>
+                </footer>
             </div>
         );
     }
