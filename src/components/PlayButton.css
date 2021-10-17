@@ -1,0 +1,15 @@
+.playButton {
+    background-color: #87cefa;
+    color: #f7f7f7;
+    border-radius: 50%;
+    border: none;
+    width: 175px;
+    height: 175px;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+.playButton:hover {
+    cursor: pointer;
+}
