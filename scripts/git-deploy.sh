@@ -3,8 +3,8 @@ git status
 
 git add .
 
-# needs some work, doesn't commit
-if [ -z $1 ]
+# should commit now, added quotes
+if [ -z "$1" ]
 then 
     git commit -m "sweet dreams are made of these changes"
 else 
